@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { EvilIcons } from '@expo/vector-icons';
 
 const SearchInput = ({ onSearch }) => {
     const [searchText, setSearchText] = useState('');
 
     const handleSearch = () => {
-        onSearch(searchText); // Arama işlemi başlatmak için onSearch işlevini çağırın
+        onSearch(searchText);
     };
 
     return (
@@ -17,7 +18,7 @@ const SearchInput = ({ onSearch }) => {
                 value={searchText}
             />
             <TouchableOpacity onPress={handleSearch} style={styles.button}>
-                <Text>Ara</Text>
+                <EvilIcons name="search" size={24} color="black" />
             </TouchableOpacity>
         </View>
     );
@@ -27,9 +28,17 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: 'lightgrey',
-        borderRadius: 8,
+        backgroundColor: 'white',
+        borderRadius: 10,
         padding: 10,
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
+        elevation: 5,
+        width: 350,
+        marginTop: 0,
+        height: 60
     },
     input: {
         flex: 1,

@@ -18,33 +18,33 @@ const Slider = () => {
     };
 
     return (
-        <View style={{height:350}}>
+        <View style={{height:280}}>
             {page === 1 && (
                 <SliderComponent
                     image={require('../assets/images/exam.png')}
                     text="Sınav becerilerinizi geliştirin."
-                    backgroundColor="lightyellow"
+                    backgroundColor="yellow"
                 />
             )}
             {page === 2 && (
                 <SliderComponent
                     image={require('../assets/images/success.png')}
                     text="Sınav başarınıza bir adım daha yaklaşın."
-                    backgroundColor="lightyellow"
+                    backgroundColor="yellow"
                 />
             )}
             {page === 3 && (
                 <SliderComponent
                     image={require('../assets/images/homework.png')}
                     text="Sınav hazırlığınızı daha eğlenceli ve etkili hale getirir."
-                    backgroundColor="lightyellow"
+                    backgroundColor="yellow"
                 />
             )}
             {page === 4 && (
                 <SliderComponent
                     image={require('../assets/images/fi.png')}
                     text="Sınav gününe bir adım daha yaklaşmanızı sağlar."
-                    backgroundColor="lightyellow"
+                    backgroundColor="yellow"
                 />
             )}
             <View style={{display:"flex",flexDirection:"row"}}>
